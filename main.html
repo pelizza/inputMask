@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Input Mask POC</title>
+  <script type="text/javascript" src="./bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="./bower_components/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
+  <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="./main.js"></script>
+</head>
+
+<body ng-app="MyApp">
+  <div ng-controller="MyCtrl">
+    <span>Type numbers here -></span>
+    <input type="text" ui-mask="'99:59:59'" placeholder="__:__:__" ng-model="number" />
+    <button ng-click="setField()">Press here to set the field from the model</button>
+    <pre>{{number}}</pre>
+  </div>
+</body>
+
+</html>
